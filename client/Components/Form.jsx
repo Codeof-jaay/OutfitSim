@@ -25,10 +25,10 @@ function Form() {
      <section id="Form" className="bg-black/30 border-b border-white/10 pb-12 relative flex items-center section-spacing c-space">
 
     <div className=" flex flex-col h-[36rem] rounded-md w-full mx-20 my-10 " style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Add 3 Numbers</h1>
+      <h1>Make a Random Sentence with any 3 words</h1>
       <form onSubmit={handleSubmit}>
         <div className="mt-8">
-                <div className="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
+                <div className="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500/20">
                   <div className="shrink-0 text-base text-gray-400 select-none sm:text-sm/6">First Number</div>
         <input
           name="num1"
@@ -40,7 +40,7 @@ function Form() {
           </div>
           </div>
        <div className="mt-8">
-                <div className="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
+                <div className="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500/20">
                   <div className="shrink-0 text-base text-gray-400 select-none sm:text-sm/6">Second Number</div>
         <input
           name="num2"
@@ -54,7 +54,7 @@ function Form() {
           </div>
 
         <div className="mt-8">
-                <div className="flex border-b-2 border-b-white/40 items-center rounded-t-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
+                <div className="flex border-b-2 border-b-white/40 items-center rounded-t-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500/20">
                   <div className="shrink-0 text-base text-gray-400 select-none sm:text-sm/6">Third Number</div>
         <input
           name="num3"
