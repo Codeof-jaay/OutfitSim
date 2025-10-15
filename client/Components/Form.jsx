@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TypingAnimation from '../src/components/Typoo'
 
 function Form() {
     const word = ["Hello World", "teach me to code"]
@@ -95,7 +96,11 @@ function Form() {
       </form>
       <div >
 
-      {result !== null && <h2>Result: {result}</h2>}
+      {result !== null && (
+        <h2>
+          Result: <TypingAnimation text={String(result)} speed={50} />
+        </h2>
+      )}
 
       </div>
     </div>
