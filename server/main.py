@@ -1,23 +1,15 @@
 from flask import Flask, request, jsonify
 from google import genai
-import os
-from dotenv import load_dotenv
 from flask_cors import CORS  # allows frontend to connect from a different port
-
-# Load environment variables from the .env file
-load_dotenv()
-
-# Access variables using os.getenv()
-api_key = os.getenv("GEMINI_API_KEY")
-
-# The client gets the API key from the environment variable `GEMINI_API_KEY`.
-client = genai.Client(api_key=api_key)
+from image_routes import image_bp
 
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:5173"])
   # enable CORS for all routes
+app.register_blueprint(image_bp)
 
 @app.route("/add", methods=["POST"])
+
 def add_numbers():
     data = request.get_json()
     try:
@@ -32,7 +24,7 @@ def add_numbers():
 
         return jsonify({"result": response.text})
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 400 
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
